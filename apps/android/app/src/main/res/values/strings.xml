@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Device Tracker</string>
+    <string name="registered_device">Your device is now registered</string>
+    <string name="ok">OK</string>
+    <string name="registering_device">Your device is being registered</string>
+    <string name="android">Android</string>
+    <string name="apple">apple</string>
+    <string name="ios">iOS</string>
+    <string name="rent">Rent</string>
+    <string name="returnDevice">Return</string>
+    <string name="cancel">Cancel</string>
+    <string name="back">Back</string>
+    <string name="manager">Device Manager</string>
+    <string name="error">Unavailabe</string>
+    <string name="charging">Charging</string>
+    <string name="discharging">Discharging</string>
+    <string name="full">Full</string>
+
+</resources>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "605487048451",
+    "firebase_url": "https://devicetracker-35237.firebaseio.com",
+    "project_id": "devicetracker-35237",
+    "storage_bucket": "devicetracker-35237.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:605487048451:android:286add5641588adc5b6b36",
+        "android_client_info": {
+          "package_name": "com.cgi.devicetracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "605487048451-1uctq3jkh856ueqiosnahjb1rnjip34n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cgi.devicetracker",
+            "certificate_hash": "5a56c061060162d426556022939b74091ba4eb44"
+          }
+        },
+        {
+          "client_id": "605487048451-av9qo3r0q7f51mrhfi3ubs0u3v0jvti8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCbqrA3fMmrxEDwpqYSn49oUUU7TtQt6p0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "605487048451-av9qo3r0q7f51mrhfi3ubs0u3v0jvti8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

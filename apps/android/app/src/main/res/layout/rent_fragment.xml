@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="testDevice"
+            type="com.cgi.devicetracker.database.TestDevice" />
+
+        <variable
+            name="mainActivityViewModel"
+            type="com.cgi.devicetracker.viewmodel.MainActivityViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="280dp"
+        android:layout_gravity="center"
+        android:background="@color/colorPrimaryDark"
+        android:orientation="vertical">
+
+        <RelativeLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+
+                android:id="@+id/device_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_vertical|start"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="monospace"
+                android:maxLength="13"
+                android:text="@{testDevice.name}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#000"
+                android:textSize="20sp"
+                tools:text="Device Name" />
+
+            <TextView
+                android:id="@+id/device_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/device_name"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:text="@{testDevice.version}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="#000"
+                android:textSize="15sp"
+                tools:text="Version" />
+
+            <TextView
+                android:id="@+id/tv_last_updated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/device_version"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="monospace"
+                android:maxLength="20"
+                android:text="@{testDevice.date}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="#000"
+                android:textSize="13sp"
+                tools:text="last updated:" />
+
+            <Spinner
+                android:id="@+id/sp_users"
+                style="@style/Widget.AppCompat.Spinner"
+                android:layout_width="221dp"
+                android:layout_height="43dp"
+                android:layout_below="@id/device_version"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="30dp"
+                android:background="@color/grey"
+                android:backgroundTint="@color/grey"
+                android:dropDownWidth="match_parent"
+                android:gravity="center"
+                android:visibility="@{testDevice.deviceID.equals(mainActivityViewModel.deviceInMyHand.deviceID) ? ((mainActivityViewModel.deviceInMyHand.holder != null) ? View.GONE : View.VISIBLE) : View.GONE}" />
+
+            <Button
+                android:id="@+id/btn_rent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="11dp"
+                android:layout_toStartOf="@+id/btn_cancel"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:text="@{testDevice.deviceID.equals(mainActivityViewModel.deviceInMyHand.deviceID)  &amp;&amp; (mainActivityViewModel.deviceInMyHand.holder != null) ? @string/returnDevice : @string/rent}"
+                android:textAllCaps="false"
+                android:textColor="#991F3D"
+                android:visibility="@{testDevice.deviceID.equals(mainActivityViewModel.deviceInMyHand.deviceID) ? View.VISIBLE : View.GONE}" />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="monospace"
+                android:text="@{testDevice.deviceID.equals(mainActivityViewModel.deviceInMyHand.deviceID) ? ((mainActivityViewModel.deviceInMyHand.holder == null) ? @string/cancel : @string/back ) : @string/back}"
+                android:textAllCaps="false"
+                android:textColor="#991F3D" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</layout>

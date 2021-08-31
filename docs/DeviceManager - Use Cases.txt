@@ -1,0 +1,41 @@
+Registration:
+As a user I want...
+	my device to be registered to the webservice automatically after opening the app for the first time.
+	an optical feedback during the registration process.
+	an optical feedback when the registration process is finished.
+	the registration process to be skipped automatically when my device is already known to the webservice.
+
+DeviceAvailability:
+As a user I want...
+	the app to have access to the information on the webservice.
+	a scrollable list of all devices including device name and version to be displayed.
+	to filter the list of devices by the device name.
+	to filter the list of devices by the device version.
+	an optical feedback for already rented devices.
+	the information of who rented the device to be displayed.
+	my own device information to be always displayed at the top of the device list even when scrolling.
+	my own device information to be optically highlighted.
+	an optical feedback if my device is already rented.
+
+RentingProcess:
+As a user I want...
+	to only be able to rent the device I have in my hands for security reasons.
+	to start the renting process by clicking on my device informations.
+	a popup displayed when starting the renting process with my device information and a selection list in it.
+	to select my user name out of a list provided by the webservice in order to rent my device.
+	to finish the renting process by affirmation per click.
+	a success notification to be displayed when successfully renting my device.
+	to return to the device list after finishing the renting process.
+	an optical feedback in the device list that my device is now rented.
+	to be able to cancel the renting process at all times.
+	
+Returning Process:
+As a user I want...
+	to only be able to return the device I have in my hands for security reasons.
+	to start the returning process by clicking on my device informations.
+	a popup displayed when starting the returning process with my device information in it.
+	to finish the returning process by affirmation per click.
+	a success notification to be displayed when successfully returning my device.
+	to return to the device list after finishing the returning process.
+	an optical feedback in the device list that my device is now available again.
+	to be able to cancel the renting process at all times.

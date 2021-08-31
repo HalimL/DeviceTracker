@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <data>
+
+        <variable
+            name="spinner_android_name"
+            type="android.widget.Spinner" />
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <FrameLayout
+                android:id="@+id/frame_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+                <Spinner
+                    android:id="@+id/spinner_name"
+                    android:layout_width="200dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="start|top"
+                    android:backgroundTint="@color/black"
+                    android:dropDownWidth="match_parent"
+                    android:visibility="visible" />
+
+
+                <Spinner
+                    android:id="@+id/spinner_version"
+                    android:layout_width="200dp"
+                    android:layout_height="43dp"
+                    android:layout_gravity="end|top"
+                    android:backgroundTint="@color/black"
+                    android:dropDownWidth="match_parent"
+                    android:visibility="visible" />
+
+
+            </FrameLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_device_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/frame_layout">
+
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+
+        </RelativeLayout>
+
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>
